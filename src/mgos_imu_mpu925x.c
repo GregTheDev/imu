@@ -56,8 +56,10 @@ static bool mgos_imu_mpu925x_create(struct mgos_i2c *i2c, uint8_t i2caddr) {
   // End GN
 
   // Reset
-  mgos_i2c_write_reg_b(i2c, i2caddr, MGOS_MPU9250_REG_PWR_MGMT_1, 0x80);
+  //mgos_i2c_write_reg_b(i2c, i2caddr, MGOS_MPU9250_REG_PWR_MGMT_1, 0x80);
+  mgos_i2c_write_reg_b(i2c, i2caddr, MGOS_MPU9250_REG_PWR_MGMT_1, 0x00);
   mgos_usleep(80000);
+  LOG(LL_INFO, ("...abc...", deviceType));
 
   // Enable IMU sensors
   mgos_i2c_write_reg_b(i2c, i2caddr, MGOS_MPU9250_REG_PWR_MGMT_2, 0x00);
