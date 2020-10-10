@@ -62,8 +62,10 @@ static bool mgos_imu_mpu925x_create(struct mgos_i2c *i2c, uint8_t i2caddr) {
   LOG(LL_INFO, ("...abc..."));
 
   // Enable IMU sensors
-  mgos_i2c_write_reg_b(i2c, i2caddr, MGOS_MPU9250_REG_PWR_MGMT_2, 0x00);
+  //mgos_i2c_write_reg_b(i2c, i2caddr, MGOS_MPU9250_REG_PWR_MGMT_2, 0x00);
+  mgos_i2c_write_reg_b(i2c, i2caddr, MGOS_MPU9250_REG_PWR_MGMT_1, 0x01);
   mgos_usleep(200000);
+  LOG(LL_INFO, ("...def..."));
 
   // I2C Passthrough enable (exposes magnetometer to I2C bus)
   //mgos_i2c_write_reg_b(i2c, i2caddr, MGOS_MPU9250_REG_INT_PIN_CFG, 0x02);
