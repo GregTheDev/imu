@@ -36,6 +36,7 @@
 #define MGOS_MPU9250_REG_ACCEL_XOUT_H       (0x3B)
 #define MGOS_MPU9250_REG_TEMP_OUT_H         (0x41)
 #define MGOS_MPU9250_REG_GYRO_XOUT_H        (0x43)
+#define MGOS_MPU9250_REG_USER_CTRL          (0x6A)
 #define MGOS_MPU9250_REG_PWR_MGMT_1         (0x6B)
 #define MGOS_MPU9250_REG_PWR_MGMT_2         (0x6C)
 #define MGOS_MPU9250_REG_WHO_AM_I           (0x75)
