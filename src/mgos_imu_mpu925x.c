@@ -46,13 +46,13 @@ static bool mgos_imu_mpu925x_create(struct mgos_i2c *i2c, uint8_t i2caddr) {
   }
 
   // Start GN
-  uint8_t deviceType;
-  LOG(LL_INFO, ("Detecting mpu9250..."));
-  if (!mgos_imu_mpu925x_detect(i2c, i2caddr, &deviceType))
-  {
-    LOG(LL_ERROR, ("...not detected"));
-  }
-  LOG(LL_INFO, ("... detected 0x%02x", deviceType));
+  // uint8_t deviceType;
+  // LOG(LL_INFO, ("Detecting mpu9250..."));
+  // if (!mgos_imu_mpu925x_detect(i2c, i2caddr, &deviceType))
+  // {
+  //   LOG(LL_ERROR, ("...not detected"));
+  // }
+  // LOG(LL_INFO, ("... detected 0x%02x", deviceType));
   // End GN
 
   // Reset
